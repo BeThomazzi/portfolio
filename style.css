@@ -183,7 +183,7 @@
   width: 100%;
   height: 60px;
   position: relative;
-  background-color: #700b97;
+  background: linear-gradient(90deg, rgb(10, 10, 10) 0%, rgb(112, 11, 151) 15%, rgb(112, 11, 151) 85%, rgb(10, 10, 10) 100%);
 }
 
 .slide {
