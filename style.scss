@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+@import "partials/colors.scss";
+@import "partials/header.scss";
+@import "partials/layout.scss";
+
+body{
+    font-family: nunito-sans, sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-color;
+
+}
+
+button{
+    font-family: nunito-sans, sans-serif;
+    cursor: pointer;
+}
+
+svg{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}

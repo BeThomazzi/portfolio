@@ -1,0 +1,123 @@
+.nav{
+    max-width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-menu{
+    width: 420px;
+    height: 48px;
+    background-color: $ui-color;
+    border-radius: 24px;
+    border: 1px solid $border;
+}
+
+.navbar-menu ul{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0px;
+}
+
+.navbar-menu ul li{
+    list-style: none;
+}
+
+.navbar-menu ul li a{
+    text-decoration: none;
+    color: $grey-70;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar-menu ul li a:hover{
+    color: $grey-70;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.navbar-menu-pages{
+    width: 100px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $ui-color;
+    border-radius: 24px;
+    border: 1px solid $border;
+    ul{
+        width: 100%;
+        padding: 0 12px;
+    }
+    li{
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        transition: all 0.2s ease-in-out;
+    }
+    li:hover{
+        scale: 1.1;
+    }
+    a{
+        text-decoration: none;
+        color: $grey-70;
+        font-size: 16px;
+    }
+    i{
+        color: $grey-70;
+    }
+}
+
+.navbar-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: $white-color;
+    margin: 4px 0;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .navbar-menu{
+        display: none; /* Hide menu by default */
+        position: absolute;
+        top: 48px; /* Adjust based on your navbar height */
+        background-color: $purple-normal;
+        z-index: 1;
+        margin: 0 auto;
+        max-width: fit-content;
+        height: fit-content;
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Show menu when active */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .navbar-menu ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .navbar-menu ul li {
+        margin: 10px 0; /* Space between items */
+        a{
+            color: $white-color;
+        }
+    }
+}
