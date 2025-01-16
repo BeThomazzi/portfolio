@@ -724,11 +724,12 @@
 /*Contato 2*/
 .contact {
   display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: 1200px;
   height: auto;
   padding: 60px 40px;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-info {

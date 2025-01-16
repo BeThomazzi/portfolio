@@ -1,31 +1,31 @@
-// Função de envio do formulário
-const form = document.getElementById('contact-form');
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
+// // Função de envio do formulário
+// const form = document.getElementById('contact-form');
+// form.addEventListener('submit', async (event) => {
+//   event.preventDefault();
 
-  // Pega os dados do formulário
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries()); // Converte para um objeto JSON
+//   // Pega os dados do formulário
+//   const formData = new FormData(form);
+//   const data = Object.fromEntries(formData.entries()); // Converte para um objeto JSON
 
-  try {
-    // Envia os dados para o backend
-    const response = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
-    });
+//   try {
+//     // Envia os dados para o backend
+//     const response = await fetch('/api/contact', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify(data),
+//     });
 
-    if (response.ok) {
-      alert('Formulário enviado com sucesso!');
-      form.reset(); // Limpa o formulário após o envio
-    } else {
-      alert('Erro ao enviar o formulário. Por favor, tente novamente.');
-    }
-  } catch (error) {
-    console.error('Erro no envio:', error);
-    alert('Ocorreu um erro inesperado. Por favor, tente novamente.');
-  }
-});
+//     if (response.ok) {
+//       alert('Formulário enviado com sucesso!');
+//       form.reset(); // Limpa o formulário após o envio
+//     } else {
+//       alert('Erro ao enviar o formulário. Por favor, tente novamente.');
+//     }
+//   } catch (error) {
+//     console.error('Erro no envio:', error);
+//     alert('Ocorreu um erro inesperado. Por favor, tente novamente.');
+//   }
+// });
 
 // Função do botão "Voltar ao Topo"
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
